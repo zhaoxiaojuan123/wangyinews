@@ -1,0 +1,256 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+@r:75rem;
+.lt{
+  float: left;
+}
+.rt{
+  float: right;
+}
+header{
+  background: linear-gradient(40deg, #838dfb, #8191f8 10%, #4fa2f1 50%, #1eabf6);
+  overflow: hidden;
+  .title{
+    padding: 20/@r  20/@r 0 20/@r ;
+    >div{
+      color: #fff;
+      font-size: 36 / @r;
+      position: relative;
+      &:nth-child(1){
+        .lt;
+        font-size: 132 / @r;
+        top:-20/@r;
+      }
+      &:nth-child(2){
+        .rt;
+        top:23/@r;
+      }
+      &:nth-child(3){
+        .rt;
+        top:23/@r;
+        right: 35/@r;
+      }
+    }
+
+  }
+   .nav_box{
+     font-size: 32 / @r;
+     overflow: hidden;
+     width: 100%;
+     margin-top: -35/@r;
+     padding-bottom: 10/@r;
+     .nav_box_a{
+       display: block;
+       width: 14.28%;
+       float: left;
+       color: #fff;
+       text-align: center;
+       margin-bottom: 20/@r;
+       text-decoration: none;
+     }
+   }
+}
+.tab_box{
+  width: 100%;
+  ul{
+    list-style: none;
+    display: flex;
+    margin: 0 20/@r;
+    border-bottom: 1px solid #ececec;
+    li{
+     flex: 1;
+      height: 80/@r;
+      line-height: 80/@r;
+      font-size: 34/@r;
+      color: #1a1a1a;
+      text-align: center;
+      position: relative;
+
+      /*&.current{
+        font-weight: 900;
+        color: #008af5;
+        position: relative;
+        &::after{
+          content: '';
+          display: block;
+          width: 50/@r;
+          height: 4/@r;
+          position: absolute;
+          background: #008af5;
+          bottom: -2/@r;
+          left: 45/@r;
+        }
+      }*/
+
+      &:nth-child(1){  //&当前样式块的节点本身
+        // 第一个li
+        text-align: left;
+      }
+      &:nth-child(3){
+        text-align: right;
+      }
+    }
+    li:nth-child(1).current{
+     font-weight: 900;
+     color: #008af5;
+     position: relative;
+     &::after{
+       content: '';
+       display: block;
+       width: 50/@r;
+       height: 4/@r;
+       position: absolute;
+       background: #008af5;
+       bottom: -2/@r;
+       left: 45/@r;
+     }
+   }
+    li:nth-child(2).current{
+      font-weight: 900;
+      color: #008af5;
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        width: 50/@r;
+        height: 4/@r;
+        position: absolute;
+        background: #008af5;
+        bottom: -2/@r;
+        //left: 80/@r;
+        left: 50%;
+        margin-left: -25/@r;
+      }
+    }
+    li:nth-child(3).current{
+      font-weight: 900;
+      color: #008af5;
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        width: 50/@r;
+        height: 4/@r;
+        position: absolute;
+        background: #008af5;
+        bottom: -2/@r;
+        //left: 80/@r;
+        right: 45/@r;
+      }
+    }
+  }
+}
+
+.news_box{
+  padding: 20/@r 20/@r 0;
+  .swiper-container{
+
+    overflow: hidden;
+    height: 340/@r;
+    .swiper-wrapper{
+      .swiper-slide{
+        max-height: 340/@r;
+        img{
+          width: 100%;
+        }
+       div{
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         color: #fff;
+         font-size: 32/@r;
+         font-weight: 400;
+         padding: 94/@r 16/@r 16/@r;
+         box-sizing: border-box;
+         background: -webkit-linear-gradient(top,transparent,rgba(0,0,0,0.4));
+       }
+      }
+    }
+    .pageBox{
+      box-sizing: border-box;
+      padding-right: 20/@r;
+      text-align: right;
+      color: #fff;
+      font-size: 30/@r;
+      .currentPage{
+        font-size: 40/@r;
+      }
+    }
+  }
+  .listBox{
+    a{
+      display: flex;
+      border-bottom: 1px solid #000;
+      color: #1a1a1a;
+      padding: 22/@r 0;
+    div.text_box{
+      flex: 1;
+      width: 100%;
+      position: relative;
+      min-height: 100/@r;
+      p{
+        font-size: 34/@r;
+        line-height: 48/@r;
+        margin-bottom: 10/@r;
+      }
+      .comment_box{
+        color: #888;
+        width: 100%;
+        text-align: right;
+        font-size: 20/@r;
+        position: absolute;
+        bottom: 13/@r;
+        em{
+          font-style: normal;
+        }
+      }
+    }
+      .img_box{
+        width: 200/@r;
+        height: 134/@r;
+        margin-right: 25/@r;
+        img{
+          width: 100%;
+        }
+      }
+  }
+    a.three_box{
+      display: block;
+      p{
+        font-size: 34/@r;
+        line-height: 48/@r;
+        margin-bottom: 10/@r;
+      }
+      .three_pic{
+        display: flex;
+        div{
+          flex: 1;
+          &:nth-child(2){
+            margin: 0 10/@r;
+          }
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .comment_box{
+        margin-top: 10/@r;
+        text-align: right;
+        width: 100%;
+        em{
+          font-style: normal;
+          font-size: 20/@r;
+        }
+      }
+    }
+  }
+}
+  // 获取数据
+/*diasplay:inline-block会把转行的空白处当成空格*/
+
+
+
